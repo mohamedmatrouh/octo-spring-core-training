@@ -2,6 +2,7 @@ package ma.octo.aop.repository.impl;
 
 import ma.octo.aop.entity.Language;
 import ma.octo.aop.repository.LanguageRepository;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 
 @Component
+@Profile("prod")
 public class LanguageRepositoryImpl implements LanguageRepository {
   private static final List<Language> LANGUAGES;
 
